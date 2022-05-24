@@ -1,0 +1,38 @@
+<div data-ng-controller="listUsers">
+    <table>
+        <thead class="tableHeader">
+            <tr>
+                <th class="tableColumnLabel">Prénom</th>
+                <th class="tableColumnLabel">Nom</th>
+                <th class="tableColumnLabel">Email</th>
+                <th class="tableColumnLabel">Inscription</th>
+                <th class="tableColumnLabel">Action <span data-bs-toggle="modal" data-bs-target="#userModal"
+                        ng-click="getUserData(0)"><img src="../images/add.png"></span></th>
+            </tr>
+        </thead>
+
+        <tbody class="tableBody">
+            <tr ng-repeat="user in users">
+                <td class="tableCell">{{ user.firstName }}</td>
+                <td class="tableCell">{{ user.lastName }}</td>
+                <td class="tableCell">{{ user.email }}</td>
+                <td class="tableCell">{{ user.createdAt }}</td>
+                <td class="tableCell action">
+                    <p>
+                        <img src="../images/settings.png" data-bs-toggle="modal"
+                            data-bs-target="#userModal">
+                    </p>
+
+                    <a href="/delete/17" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                        <img src="../images/delete.png">
+                    </a>
+
+
+                </td>
+
+
+            </tr>
+        </tbody>
+
+    </table>
+    </div>
