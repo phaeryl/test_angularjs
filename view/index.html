@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Gestion des utilisateurs</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.js"></script>
-    <script src="../controller/app.js"></script>
-    <script src="../controller/usersList.js"></script>
+    <script src="../controller/listUsers.js"></script>
+    <script src="../service/usersFactory.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 
 <body data-ng-app="usersManagement">
-    <div data-ng-controller="usersList">
+    <div data-ng-controller="listUsers">
         <table>
             <thead class="tableHeader">
                 <tr>
