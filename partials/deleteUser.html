@@ -1,0 +1,14 @@
+<div data-ng-controller="deleteUser">
+
+    <h1>Titre</h1>
+    <ul>
+        <li>Prénom: {{user.firstName}}</li>
+        <li>Nom: {{user.lastName}}</li>
+        <li>Adresse email: {{user.email}}</li>
+        <li>Date d'inscription: {{user.createdAt}}</li>
+    </ul>
+
+    <hr />
+    <a href="/home/edit/{{user.id}}">Modifier</a> | <a href="/home">Retour à la liste</a>
+    <a class="btn btn-danger" ng-click="deleteUser()">Supprimer</a>
+</div>

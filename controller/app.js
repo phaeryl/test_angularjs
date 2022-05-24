@@ -1,7 +1,7 @@
 var app = angular.module('usersManagement', ['ngRoute']);
 app.config(['$locationProvider', function($locationProvider) {
     $locationProvider.html5Mode(true);
-    $locationProvider.hashPrefix('');
+    $locationProvider.hashPrefix('*');
   }]);
 app.config(function ($routeProvider) {
     
