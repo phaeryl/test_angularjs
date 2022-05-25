@@ -26,13 +26,12 @@ app.factory("usersService", function ($http) {
     };
 
     // Insert (post) user data
-    usersService.insertUser = function (firstName, lastName, email) {
+    usersService.insertUser = function (firstName, lastName, email, today) {
         let userData = {
             firstName: firstName,
             lastName: lastName,
             email: email,
-            createdAt: "24-05-2022",
-            // ^ Need to insert today's date, coming soon.
+            createdAt: today
         };
 
         let promise = $http({
@@ -61,7 +60,6 @@ app.factory("usersService", function ($http) {
                     data : userData
                 })
                 .then(function() {
-                    console.log("Mise à jour effectuée.");
                 });
             return promise;
         };
