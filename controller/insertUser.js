@@ -1,4 +1,4 @@
-app.controller("insertUser", function ($scope, usersService, $rootScope, $location) {
+app.controller("insertUser", function ($scope, usersService, $rootScope) {
     $scope.insertUser = function () {
         let message = confirm("Prénom: " + $scope.firstName + ", Nom: " + $scope.lastName + ", Email: " + $scope.email + "Voulez-vous créer cet utilisateur?")
         if (message)
