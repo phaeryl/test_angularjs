@@ -8,10 +8,9 @@ app.controller("deleteUser", function ($scope, usersService, $routeParams, $root
     
     $scope.deleteUser = function () {
         let message = confirm('Voulez-vous vraiment supprimer cet utilisateur?');
-        if (v) {
+        if (message) {
             $rootScope.loading = true;
-            usersService.deleteUser($routeParams.id).then(function (d) {
-                $scope.deleteMessage = d;
+            usersService.deleteUser($routeParams.id).then(function () {
                 $location.url("/home");
                 $rootScope.loading = false;
             });
