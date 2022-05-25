@@ -1,4 +1,4 @@
-app.controller("updateUser", function ($scope, usersService, $routeParams, $rootScope, $location) {
+app.controller("updateUser", function ($scope, usersService, $routeParams, $rootScope) {
     $scope.title = "Informations utilisateur";
     $rootScope.loading = true;
     $scope.getSingleUser = usersService.getSingleUser($routeParams.id).then(function (user) {
