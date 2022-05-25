@@ -1,7 +1,10 @@
 /*Table style from https://codepen.io/oliagozha/pen/vMXmNx*/
 
  /*General styles*/
-
+.visibleOnlyOnMobile
+{
+  display: none;
+}
 body {
     background-color: #f3f3f3;
     font-family: Futura, sans-serif;
@@ -84,7 +87,11 @@ body {
   /* Mobile table styles */
   
   @media only screen and (max-width: 767px) {
-  
+    .visibleOnlyOnMobile
+    {
+      display: block;
+      position: fixed;
+    }
       table, thead, tbody, th, td, tr { 
           display: block; 
     }
