@@ -1,16 +1,21 @@
-app.controller("deleteUser", function ($scope, usersService, $routeParams, $rootScope, $location) {
+app.controller("deleteUser", function ($scope, usersService, $routeParams, $rootScope, $location)
+{
     $scope.title = "Informations utilisateur";
     $rootScope.loading = true;
-    $scope.getSingleUser = usersService.getSingleUser($routeParams.id).then(function (user) {
+    $scope.getSingleUser = usersService.getSingleUser($routeParams.id).then(function (user)
+    {
         $scope.user = user;
         $rootScope.loading = false;
     });
-    
-    $scope.deleteUser = function () {
+
+    $scope.deleteUser = function ()
+    {
         let message = confirm('Voulez-vous vraiment supprimer cet utilisateur?');
-        if (message) {
+        if (message)
+        {
             $rootScope.loading = true;
-            usersService.deleteUser($routeParams.id).then(function () {
+            usersService.deleteUser($routeParams.id).then(function ()
+            {
                 $location.url("/home");
                 $rootScope.loading = false;
             });
