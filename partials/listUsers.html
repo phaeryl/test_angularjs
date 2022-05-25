@@ -18,12 +18,11 @@
                 <td class="tableCell">{{ user.email }}</td>
                 <td class="tableCell">{{ user.createdAt }}</td>
                 <td class="tableCell action">
-                    <p>
-                        <img src="../images/settings.png" data-bs-toggle="modal"
-                            data-bs-target="#userModal">
-                    </p>
+                    <a href="/edit/{{user.id}}">
+                        <img src="../images/settings.png">
+                    </a>
 
-                    <a href="/delete/{{user.id}}" >
+                    <a href="/delete/{{user.id}}">
                         <img src="../images/delete.png">
                     </a>
 
@@ -35,4 +34,4 @@
         </tbody>
 
     </table>
-    </div>
+</div>
